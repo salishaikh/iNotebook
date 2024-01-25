@@ -7,12 +7,12 @@ const Signup = (props) => {
     const [cred, setCred] = useState({name:"" , email : "" , password : "" ,cpassword : ""});
     const navigate = useNavigate();
 
-
+    const host =  'https://inotebook-backend-4nxo.onrender.com';
 
   const handlesubmit = async (e) => {
     e.preventDefault();
     const {name , password ,email} = cred;
-    const response = await fetch("http://localhost:5000/api/auth/createUser", {
+    const response = await fetch(`${host}/api/auth/createUser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
