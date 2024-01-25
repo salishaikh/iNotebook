@@ -17,7 +17,7 @@ const handleclick =(e)=>{
   e.preventDefault();
   addNote(note.title ,note.description, note.tag, localStorage.getItem('token'));
   setnote({title:  "" ,description: "", tag : "" } );
-  props.showAlert("Added successfully" , " success");
+  props.showAlert("Added Successfully" , "success")
 }
 const onchange = (e)=>{
 setnote({...note , [e.target.name] : e.target.value})
